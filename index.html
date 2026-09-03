@@ -129,7 +129,15 @@ let DATA = null;
 
 function esc(s){const d=document.createElement("div");d.textContent=s??"";return d.innerHTML;}
 function badge(s){return `<span class="badge ${esc((s||"").toLowerCase())}">${esc(s)}</span>`;}
-function cls(st){return (st||"").toLowerCase().replace(/\s+/g,"").slice(0,2);}
+function cls(st){
+  const k=(st||"").toLowerCase().trim();
+  if(k==="operational") return "op";
+  if(k==="degraded performance") return "dp";
+  if(k==="partial outage") return "po";
+  if(k==="full outage") return "fo";
+  if(k==="maintenance") return "mt";
+  return "op";
+}
 
 function hhmm(iso){try{return new Date(iso).toLocaleTimeString("fa-IR",{hour:"2-digit",minute:"2-digit"});}catch(e){return ""}}
 function fullt(iso){try{return new Date(iso).toLocaleString("fa-IR",{year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});}catch(e){return ""}}
