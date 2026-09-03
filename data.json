@@ -1,0 +1,104 @@
+{
+  "brand": "Gz",
+  "updated_at": "2026-09-03T12:37:29.203104+00:00",
+  "overall": "operational",
+  "incidents": [
+    {
+      "id": "01M1K49NHMGJRJZEW04KEFP2VH",
+      "title": "اختلال در سرویس",
+      "status": "resolved",
+      "status_fa": "حل شد",
+      "message": "مشکل به طور کامل حل شده و در حال حاضر سرویس ها کاملا پایدار هستند",
+      "components": [
+        {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "Finland",
+          "name_fa": "فنلاند",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "Germany",
+          "name_fa": "آلمان",
+          "status": "operational",
+          "status_fa": "فعال"
+        }
+      ],
+      "published_at": "2026-09-03T12:00:14+00:00",
+      "published_fa": "2026-09-03 12:00 UTC"
+    },
+    {
+      "id": "01M1BJ2ED540C8PKACBCAFTP6S",
+      "title": "مشکل در سرویس های تانل",
+      "status": "resolved",
+      "status_fa": "حل شد",
+      "message": "مشکل به طور کامل حل شده",
+      "components": [
+        {
+          "name": "Germany",
+          "name_fa": "آلمان",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "Finland",
+          "name_fa": "فنلاند",
+          "status": "operational",
+          "status_fa": "فعال"
+        }
+      ],
+      "published_at": "2026-09-01T09:48:41+00:00",
+      "published_fa": "2026-09-01 09:48 UTC"
+    },
+    {
+      "id": "01KZRM7JK69GSVFSW62YJS277P",
+      "title": "اختلال در سرویس ها",
+      "status": "resolved",
+      "status_fa": "حل شد",
+      "message": "مشکل کاملا حل شده",
+      "components": [
+        {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "Finland",
+          "name_fa": "فنلاند",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "Germany",
+          "name_fa": "آلمان",
+          "status": "operational",
+          "status_fa": "فعال"
+        }
+      ],
+      "published_at": "2026-08-16T06:50:41+00:00",
+      "published_fa": "2026-08-16 06:50 UTC"
+    },
+    {
+      "id": "01KYZDAB1KS8F8P251Z637ZVZT",
+      "title": "مشکل حل شده",
+      "status": "resolved",
+      "status_fa": "حل شد",
+      "message": "مشکل به طور کامل حل شده و تمامی سرویس ها به حالت پایدار در آمده اند",
+      "components": [],
+      "published_at": "2026-08-07T09:03:20+00:00",
+      "published_fa": "2026-08-07 09:03 UTC"
+    }
+  ]
+}

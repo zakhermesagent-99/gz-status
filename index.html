@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gz — وضعیت سرویس</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟢</text></svg>">
+<style>
+  :root{
+    --bg:#0b0f17; --card:#121826; --border:#1f2937;
+    --text:#e5e7eb; --muted:#9ca3af;
+    --ok:#10b981; --warn:#f59e0b; --bad:#ef4444;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:Vazirmatn,Tahoma,-apple-system,"Segoe UI",sans-serif;
+    min-height:100vh;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+  header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{
+    width:42px;height:42px;border-radius:12px;
+    background:linear-gradient(135deg,#7c3aed,#4f46e5);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:19px;color:#fff;
+  }
+  .brand h1{font-size:20px;margin:0}
+  .brand small{color:var(--muted)}
+  .overall{
+    border:1px solid var(--border); background:var(--card);
+    border-radius:16px; padding:18px 20px; margin-bottom:22px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .dot{width:14px;height:14px;border-radius:50%;flex:none;animation:pulse 2s infinite}
+  .dot.ok{background:var(--ok)} .dot.bad{background:var(--bad)}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+  .overall h2{margin:0;font-size:16px;font-weight:600}
+  .overall p{margin:2px 0 0;color:var(--muted);font-size:13px}
+  .incident{
+    border:1px solid var(--border); background:var(--card);
+    border-radius:16px; padding:16px 18px; margin-bottom:14px;
+  }
+  .incident-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .incident-head h3{margin:0;font-size:15px}
+  .badge{font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid}
+  .badge.resolved{color:var(--ok);border-color:var(--ok)}
+  .badge.monitoring{color:var(--warn);border-color:var(--warn)}
+  .badge.investigating,.badge.identified{color:var(--bad);border-color:var(--bad)}
+  .msg{color:var(--text);font-size:14px;line-height:1.9;margin:12px 0 10px;white-space:pre-line}
+  .comps{display:flex;flex-wrap:wrap;gap:6px}
+  .comp{font-size:12px;color:var(--muted);border:1px solid var(--border);border-radius:8px;padding:3px 9px}
+  .comp b{color:var(--text);font-weight:600}
+  time{color:var(--muted);font-size:12px}
+  footer{margin-top:34px;text-align:center;color:var(--muted);font-size:12px;line-height:2}
+  .skeleton{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px;color:var(--muted);font-size:13px}
+  a{color:#a78bfa}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo">Gz</div>
+      <div>
+        <h1>Gz</h1>
+        <small>وضعیت سرویس</small>
+      </div>
+    </div>
+    <time id="updated"></time>
+  </header>
+
+  <div class="overall" id="overall">
+    <div class="dot ok" id="odot"></div>
+    <div>
+      <h2 id="otitle">در حال بارگذاری…</h2>
+      <p id="osub">در حال دریافت آخرین وضعیت</p>
+    </div>
+  </div>
+
+  <div id="list"><div class="skeleton">در حال دریافت اطلاعات…</div></div>
+
+  <footer>
+    برای اطلاع از وضعیت سرویس، همین صفحه را به‌روز نگه دارید.
+  </footer>
+</div>
+
+<script>
+const OVERALL_OK = "همه سرویس‌ها فعال هستند";
+const OVERALL_OK_SUB = "در حال حاضر هیچ اختلالی گزارش نشده است";
+const OVERALL_BAD = "اختلال در سرویس‌ها";
+const OVERALL_BAD_SUB = "یک یا چند سرویس با مشکل مواجه هستند — جزئیات در پایین";
+
+function badgeCls(s){return (s||"").toLowerCase().replace(/\s+/g,"");}
+
+async function load(){
+  try{
+    const r = await fetch("data.json", {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+
+    document.getElementById("updated").textContent =
+      "آخرین بررسی: " + new Date(d.updated_at).toLocaleString("fa-IR");
+
+    const dot = document.getElementById("odot");
+    const active = d.incidents.find(i => i.status !== "resolved");
+    dot.className = "dot " + (active ? "bad" : "ok");
+    document.getElementById("otitle").textContent = active ? OVERALL_BAD : OVERALL_OK;
+    document.getElementById("osub").textContent = active ? OVERALL_BAD_SUB : OVERALL_OK_SUB;
+
+    const list = document.getElementById("list");
+    if(!d.incidents.length){
+      list.innerHTML = '<div class="skeleton">هنوز حادثه‌ای ثبت نشده است ✅</div>';
+      return;
+    }
+    list.innerHTML = d.incidents.map(i => {
+      const comps = (i.components||[]).map(c =>
+        `<span class="comp"><b>${esc(c.name_fa)}</b> — ${esc(c.status_fa)}</span>`).join("");
+      return `
+      <div class="incident">
+        <div class="incident-head">
+          <h3>${esc(i.title)}</h3>
+          <span class="badge ${badgeCls(i.status)}">${esc(i.status_fa)}</span>
+        </div>
+        <div class="msg">${esc(i.message)}</div>
+        ${comps?`<div class="comps">${comps}</div>`:""}
+        <time>⏱ ${esc(i.published_fa)}</time>
+      </div>`;
+    }).join("");
+  }catch(e){
+    document.getElementById("otitle").textContent = "خطا در دریافت وضعیت";
+    document.getElementById("osub").textContent = "دوباره تلاش کنید";
+    document.getElementById("odot").className = "dot bad";
+    document.getElementById("list").innerHTML =
+      '<div class="skeleton">دریافت اطلاعات ناموفق بود — صفحه را دوباره باز کنید</div>';
+  }
+}
+function esc(s){const d=document.createElement("div");d.textContent=s??"";return d.innerHTML;}
+load();
+setInterval(load, 60_000);
+</script>
+</body>
+</html>
