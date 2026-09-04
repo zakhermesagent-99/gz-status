@@ -1,6 +1,6 @@
 {
   "brand": "Gz",
-  "updated_at": "2026-09-04T04:44:50.777443+00:00",
+  "updated_at": "2026-09-04T09:06:31.123217+00:00",
   "overall": "operational",
   "incidents": [
     {
@@ -92,12 +92,6 @@
           "message": "مشکل شناسایی شده در حال رفع مشکل هستیم",
           "components": [
             {
-              "name": "US",
-              "name_fa": "آمریکا",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "degraded performance",
@@ -106,6 +100,12 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
+              "name": "US",
+              "name_fa": "آمریکا",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
@@ -146,12 +146,6 @@
           "message": "مشکل به طور کامل حل شده و در حال حاضر سرویس ها کاملا پایدار هستند",
           "components": [
             {
-              "name": "US",
-              "name_fa": "آمریکا",
-              "status": "operational",
-              "status_fa": "فعال"
-            },
-            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "operational",
@@ -160,6 +154,12 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
+              "status": "operational",
+              "status_fa": "فعال"
+            },
+            {
+              "name": "US",
+              "name_fa": "آمریکا",
               "status": "operational",
               "status_fa": "فعال"
             }
@@ -258,6 +258,12 @@
       "message": "مشکل به طور کامل حل شده",
       "components": [
         {
+          "name": "Germany",
+          "name_fa": "آلمان",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
           "name": "US",
           "name_fa": "آمریکا",
           "status": "operational",
@@ -266,12 +272,6 @@
         {
           "name": "Finland",
           "name_fa": "فنلاند",
-          "status": "operational",
-          "status_fa": "فعال"
-        },
-        {
-          "name": "Germany",
-          "name_fa": "آلمان",
           "status": "operational",
           "status_fa": "فعال"
         }
