@@ -1,6 +1,6 @@
 {
   "brand": "Gz",
-  "updated_at": "2026-09-10T13:53:28.958708+00:00",
+  "updated_at": "2026-09-10T17:27:33.028225+00:00",
   "overall": "operational",
   "incidents": [
     {
@@ -119,6 +119,12 @@
           "message": "مشکل حل شده در حال مانیتور سرویس ها هستیم",
           "components": [
             {
+              "name": "Germany",
+              "name_fa": "آلمان",
+              "status": "operational",
+              "status_fa": "فعال"
+            },
+            {
               "name": "US",
               "name_fa": "آمریکا",
               "status": "operational",
@@ -127,12 +133,6 @@
             {
               "name": "Finland",
               "name_fa": "فنلاند",
-              "status": "operational",
-              "status_fa": "فعال"
-            },
-            {
-              "name": "Germany",
-              "name_fa": "آلمان",
               "status": "operational",
               "status_fa": "فعال"
             }
@@ -339,6 +339,12 @@
           "message": "مشکل حل شده در حال مانیتور سرویس هستیم",
           "components": [
             {
+              "name": "Germany",
+              "name_fa": "آلمان",
+              "status": "operational",
+              "status_fa": "فعال"
+            },
+            {
               "name": "US",
               "name_fa": "آمریکا",
               "status": "operational",
@@ -347,12 +353,6 @@
             {
               "name": "Finland",
               "name_fa": "فنلاند",
-              "status": "operational",
-              "status_fa": "فعال"
-            },
-            {
-              "name": "Germany",
-              "name_fa": "آلمان",
               "status": "operational",
               "status_fa": "فعال"
             }
@@ -366,6 +366,12 @@
           "message": "مشکل به طور کامل حل شده",
           "components": [
             {
+              "name": "US",
+              "name_fa": "آمریکا",
+              "status": "operational",
+              "status_fa": "فعال"
+            },
+            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "operational",
@@ -374,12 +380,6 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
-              "status": "operational",
-              "status_fa": "فعال"
-            },
-            {
-              "name": "US",
-              "name_fa": "آمریکا",
               "status": "operational",
               "status_fa": "فعال"
             }
