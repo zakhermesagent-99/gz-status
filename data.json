@@ -1,6 +1,6 @@
 {
   "brand": "Gz",
-  "updated_at": "2026-10-02T06:47:34.005271+00:00",
+  "updated_at": "2026-10-02T13:15:00.429815+00:00",
   "overall": "active",
   "incidents": [
     {
@@ -820,12 +820,6 @@
           "message": "مشکل شناسایی شد در حال رفع مشکل هستیم",
           "components": [
             {
-              "name": "US",
-              "name_fa": "آمریکا",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "degraded performance",
@@ -834,6 +828,12 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
+              "name": "US",
+              "name_fa": "آمریکا",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
