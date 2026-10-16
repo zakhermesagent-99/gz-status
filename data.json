@@ -1,6 +1,6 @@
 {
   "brand": "Gz",
-  "updated_at": "2026-10-16T05:55:33.849010+00:00",
+  "updated_at": "2026-10-16T10:55:31.857056+00:00",
   "overall": "active",
   "incidents": [
     {
@@ -11,6 +11,12 @@
       "message": "حل شده",
       "components": [
         {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
           "name": "Finland",
           "name_fa": "فنلاند",
           "status": "operational",
@@ -19,12 +25,6 @@
         {
           "name": "Germany",
           "name_fa": "آلمان",
-          "status": "operational",
-          "status_fa": "فعال"
-        },
-        {
-          "name": "US",
-          "name_fa": "آمریکا",
           "status": "operational",
           "status_fa": "فعال"
         }
@@ -38,6 +38,12 @@
           "message": "اختلال در سرویس های تانل مشاهده شد",
           "components": [
             {
+              "name": "US",
+              "name_fa": "آمریکا",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "degraded performance",
@@ -46,12 +52,6 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
-              "name": "US",
-              "name_fa": "آمریکا",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
@@ -65,12 +65,6 @@
           "message": "در حال برسی موضوع هستیم",
           "components": [
             {
-              "name": "Finland",
-              "name_fa": "فنلاند",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
               "name": "Germany",
               "name_fa": "آلمان",
               "status": "degraded performance",
@@ -79,6 +73,12 @@
             {
               "name": "US",
               "name_fa": "آمریکا",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
+              "name": "Finland",
+              "name_fa": "فنلاند",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
@@ -116,6 +116,26 @@
       ],
       "charts": [
         {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "segments": [
+            {
+              "start": "2026-10-05T16:57:42+00:00",
+              "end": "2026-10-07T17:58:12+00:00",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
+              "start": "2026-10-07T17:58:12+00:00",
+              "end": "2026-10-07T17:58:12+00:00",
+              "status": "operational",
+              "status_fa": "فعال"
+            }
+          ],
+          "start": "2026-10-05T16:57:42+00:00",
+          "end": "2026-10-07T17:58:12+00:00"
+        },
+        {
           "name": "Finland",
           "name_fa": "فنلاند",
           "segments": [
@@ -138,26 +158,6 @@
         {
           "name": "Germany",
           "name_fa": "آلمان",
-          "segments": [
-            {
-              "start": "2026-10-05T16:57:42+00:00",
-              "end": "2026-10-07T17:58:12+00:00",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
-              "start": "2026-10-07T17:58:12+00:00",
-              "end": "2026-10-07T17:58:12+00:00",
-              "status": "operational",
-              "status_fa": "فعال"
-            }
-          ],
-          "start": "2026-10-05T16:57:42+00:00",
-          "end": "2026-10-07T17:58:12+00:00"
-        },
-        {
-          "name": "US",
-          "name_fa": "آمریکا",
           "segments": [
             {
               "start": "2026-10-05T16:57:42+00:00",
@@ -345,18 +345,6 @@
       "message": "به دلیل ارتقای کیفیت و پایداری سرویس در این ساعت ممکن است سرویس ها اختلال داشته باشند",
       "components": [
         {
-          "name": "Sub",
-          "name_fa": "Sub",
-          "status": "under maintenance",
-          "status_fa": "under maintenance"
-        },
-        {
-          "name": "Germany",
-          "name_fa": "آلمان",
-          "status": "under maintenance",
-          "status_fa": "under maintenance"
-        },
-        {
           "name": "US",
           "name_fa": "آمریکا",
           "status": "under maintenance",
@@ -365,6 +353,18 @@
         {
           "name": "Finland",
           "name_fa": "فنلاند",
+          "status": "under maintenance",
+          "status_fa": "under maintenance"
+        },
+        {
+          "name": "Sub",
+          "name_fa": "Sub",
+          "status": "under maintenance",
+          "status_fa": "under maintenance"
+        },
+        {
+          "name": "Germany",
+          "name_fa": "آلمان",
           "status": "under maintenance",
           "status_fa": "under maintenance"
         }
@@ -582,12 +582,6 @@
           "message": "مشکل حل شده در حال مانیتور سرویس ها هستیم",
           "components": [
             {
-              "name": "US",
-              "name_fa": "آمریکا",
-              "status": "operational",
-              "status_fa": "فعال"
-            },
-            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "operational",
@@ -596,6 +590,12 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
+              "status": "operational",
+              "status_fa": "فعال"
+            },
+            {
+              "name": "US",
+              "name_fa": "آمریکا",
               "status": "operational",
               "status_fa": "فعال"
             }
@@ -721,12 +721,6 @@
       "message": "مشکل به طور کامل حل شده",
       "components": [
         {
-          "name": "Germany",
-          "name_fa": "آلمان",
-          "status": "operational",
-          "status_fa": "فعال"
-        },
-        {
           "name": "US",
           "name_fa": "آمریکا",
           "status": "operational",
@@ -735,6 +729,12 @@
         {
           "name": "Finland",
           "name_fa": "فنلاند",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "Germany",
+          "name_fa": "آلمان",
           "status": "operational",
           "status_fa": "فعال"
         }
@@ -995,6 +995,12 @@
           "message": "مشکل شناسایی شد در حال رفع مشکل هستیم",
           "components": [
             {
+              "name": "US",
+              "name_fa": "آمریکا",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "degraded performance",
@@ -1003,12 +1009,6 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
-              "name": "US",
-              "name_fa": "آمریکا",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
