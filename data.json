@@ -1,6 +1,6 @@
 {
   "brand": "Gz",
-  "updated_at": "2026-10-20T12:18:03.081912+00:00",
+  "updated_at": "2026-10-20T17:20:39.252410+00:00",
   "overall": "active",
   "incidents": [
     {
@@ -11,6 +11,12 @@
       "message": "حل شده",
       "components": [
         {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
           "name": "Finland",
           "name_fa": "فنلاند",
           "status": "operational",
@@ -19,12 +25,6 @@
         {
           "name": "Germany",
           "name_fa": "آلمان",
-          "status": "operational",
-          "status_fa": "فعال"
-        },
-        {
-          "name": "US",
-          "name_fa": "آمریکا",
           "status": "operational",
           "status_fa": "فعال"
         }
@@ -65,6 +65,12 @@
           "message": "در حال برسی موضوع هستیم",
           "components": [
             {
+              "name": "US",
+              "name_fa": "آمریکا",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
               "name": "Finland",
               "name_fa": "فنلاند",
               "status": "degraded performance",
@@ -73,12 +79,6 @@
             {
               "name": "Germany",
               "name_fa": "آلمان",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
-              "name": "US",
-              "name_fa": "آمریکا",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
@@ -345,6 +345,12 @@
       "message": "به دلیل ارتقای کیفیت و پایداری سرویس در این ساعت ممکن است سرویس ها اختلال داشته باشند",
       "components": [
         {
+          "name": "US",
+          "name_fa": "آمریکا",
+          "status": "under maintenance",
+          "status_fa": "under maintenance"
+        },
+        {
           "name": "Finland",
           "name_fa": "فنلاند",
           "status": "under maintenance",
@@ -359,12 +365,6 @@
         {
           "name": "Germany",
           "name_fa": "آلمان",
-          "status": "under maintenance",
-          "status_fa": "under maintenance"
-        },
-        {
-          "name": "US",
-          "name_fa": "آمریکا",
           "status": "under maintenance",
           "status_fa": "under maintenance"
         }
@@ -528,12 +528,6 @@
           "message": "سرویس ها روی سرور های پشتیبان رفته اند اما ممکن است با اختلال مواجه باشند در حال برسی هستیم تا مشکل سرور های اصلی را شناسایی کنیم تا سرویس ها به حالت قبل باز گردند",
           "components": [
             {
-              "name": "Germany",
-              "name_fa": "آلمان",
-              "status": "degraded performance",
-              "status_fa": "کاهش عملکرد"
-            },
-            {
               "name": "US",
               "name_fa": "آمریکا",
               "status": "degraded performance",
@@ -542,6 +536,12 @@
             {
               "name": "Finland",
               "name_fa": "فنلاند",
+              "status": "degraded performance",
+              "status_fa": "کاهش عملکرد"
+            },
+            {
+              "name": "Germany",
+              "name_fa": "آلمان",
               "status": "degraded performance",
               "status_fa": "کاهش عملکرد"
             }
@@ -941,12 +941,6 @@
       "message": "مشکل کاملا حل شده",
       "components": [
         {
-          "name": "US",
-          "name_fa": "آمریکا",
-          "status": "operational",
-          "status_fa": "فعال"
-        },
-        {
           "name": "Finland",
           "name_fa": "فنلاند",
           "status": "operational",
@@ -955,6 +949,12 @@
         {
           "name": "Germany",
           "name_fa": "آلمان",
+          "status": "operational",
+          "status_fa": "فعال"
+        },
+        {
+          "name": "US",
+          "name_fa": "آمریکا",
           "status": "operational",
           "status_fa": "فعال"
         }
@@ -1022,12 +1022,6 @@
           "message": "مشکل حل شده در حال نظارت بر سیستم هستیم",
           "components": [
             {
-              "name": "Germany",
-              "name_fa": "آلمان",
-              "status": "operational",
-              "status_fa": "فعال"
-            },
-            {
               "name": "US",
               "name_fa": "آمریکا",
               "status": "operational",
@@ -1036,6 +1030,12 @@
             {
               "name": "Finland",
               "name_fa": "فنلاند",
+              "status": "operational",
+              "status_fa": "فعال"
+            },
+            {
+              "name": "Germany",
+              "name_fa": "آلمان",
               "status": "operational",
               "status_fa": "فعال"
             }
